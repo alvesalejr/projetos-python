@@ -6,21 +6,27 @@ Lógica: Projeto de Aprendizado de Python - Calcular o IMC.
 4: Preciso imprimir na tela o resultado pro usuário.
 '''
 
-def calcularimc():
-    nome = input('Olá, digite o seu nome: ')
-    altura = float(input(f'Olá, {nome} digite a sua altura: '))
-    peso = float(input(f'{nome}, agora digite o seu peso: '))
-    imc = peso / (altura * altura)
+class CalcularImc:
+    def __init__(self):
+        self.nome = input('Olá, digite o seu nome: ')
+        self.altura = float(input(f'Olá, {self.nome} digite a sua altura: '))
+        self.peso = float(input(f'{self.nome}, agora digite o seu peso: '))
+        self.imc = self.peso / (self.altura * self.altura)
 
-    if imc < 18.5:
-        print(f'{nome}, você está abaixo do peso.')
-    elif imc >= 18.5 and imc <= 24.9:
-        print(f'{nome}, você está no peso normal.')
-    elif imc >= 25 and imc <= 29.9:
-        print(f'{nome}, você está sobrepreso.')
-    elif imc >= 30 and imc <= 34.9:
-        print(f'{nome}, você está com obesidade Grau 1.')
-    elif imc >= 35 and imc <= 39.9:
-        print(f'{nome}, você está com obesidade Grau 2.')
-    elif imc >= 40:
-        print(f'{nome}, você está com obesidade Grau 3.')
+    def Calcular(self):
+        
+        if self.imc < 18.5:
+            print(f'{self.nome}, você está abaixo do peso.')
+        elif self.imc >= 18.5 and self.imc <= 24.9:
+            print(f'{self.nome}, você está no peso normal.')
+        elif self.imc >= 25 and self.imc <= 29.9:
+            print(f'{self.nome}, você está sobrepreso.')
+        elif self.imc >= 30 and self.imc <= 34.9:
+            print(f'{self.nome}, você está com obesidade Grau 1.')
+        elif self.imc >= 35 and self.imc <= 39.9:
+            print(f'{self.nome}, você está com obesidade Grau 2.')
+        elif self.imc >= 40:
+            print(f'{self.nome}, você está com obesidade Grau 3.')
+
+calculador = CalcularImc()
+calculador.Calcular()
