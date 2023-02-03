@@ -1,31 +1,27 @@
-''' 
-Lógica: Projeto de Aprendizado de Python - Simular um Dado
-'''
 import random
 
 class SimuladorDeDado:
-    def __init__(self): # Função
+    def __init__(self): #Função
         self.valor_minimo = 1
         self.valor_maximo = 6
-        self.mensagem = 'Olá, você gostaria de gerar um novo valor? '
+        self.nome = input('Olá, digite seu nome: ')
+        self.mensagem = (f'Olá, {self.nome} você gostaria de gerar um valor? ')
         
     def Iniciar(self):
         resposta = input(self.mensagem)
-        try:
-            if resposta == 'Sim' or resposta == 'sim':
-                self.GerarValorDoDado()
-                
-            elif resposta == 'Não' or resposta == 'não':
-                print('Obrigado, volte sempre.')
-                
+        try: #Condição de SE ou NÃO.
+            if self.eventos == 'Sim' or self.eventos == 'sim':
+                self.GerarValorDoDado() #SE SIM, Chamando a Função gerarvalordado.
+            elif self.eventos == 'Não' or self.eventos == 'não':
+                print('Obrigado, volte sempre.')             
             else:
                 print('Por favor, digite "Sim" ou "Não"')
-                return input(self.mensagem)
+                self.Iniciar() #SE NÃO, chamando a função de inicio.
         except:
-            print('Ocorreu um erro')
-            
-    def GerarValorDoDado(self):
-        print(random.randint(self.valor_minimo, self.valor_maximo))
+                print('Ocorreu um erro')
+                       
+    def GerarValorDoDado(self): #Função para gerar o número.
+        print("Valor gerado:", random.randint(self.valor_minimo, self.valor_maximo))
 
-simulador = SimuladorDeDado()
+simulador = SimuladorDeDado() #Instanciando a Classe e a Função.
 simulador.Iniciar()

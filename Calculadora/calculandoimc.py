@@ -13,7 +13,7 @@ class CalcularImc:
         self.peso = float(input(f'{self.nome}, agora digite o seu peso: '))
         self.imc = self.peso / (self.altura * self.altura)
 
-    def Calcular(self):
+    def Calcular(self): #Função pra calcular
         
         if self.imc < 18.5:
             print(f'{self.nome}, você está abaixo do peso.')
