@@ -1,11 +1,9 @@
-# Projeto de Aprendizado de Python - Calcular o IMC.
-
-''' Lógica:
+''' 
+Lógica: Projeto de Aprendizado de Python - Calcular o IMC.
 1: Preciso das informações do Usuário Altura / Peso e o Nome.
 2: Preciso que ele digite as informações.
 3: Preciso de um cálculo que me traga o resultado.
 4: Preciso imprimir na tela o resultado pro usuário.
-
 '''
 
 def calcularimc():
