@@ -1,4 +1,5 @@
 import random
+
 class SimuladorDeDado:
     def __init__(self): #Função
         self.valor_minimo = 1
