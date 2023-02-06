@@ -4,6 +4,7 @@ Lógica: Projeto de Aprendizado de Python - Calcular o IMC.
 2: Preciso que ele digite as informações.
 3: Preciso de um cálculo que me traga o resultado.
 4: Preciso imprimir na tela o resultado pro usuário.
+
 '''
 
 class CalcularImc:
